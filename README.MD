@@ -9,9 +9,9 @@
 
 运行环境
 ========
-*操作系统——Windows NT<br>
-*执行环境——python2.7<br>
-*Python包依赖——gmpy2<br>
+操作系统——Windows NT<br>
+执行环境——python2.7<br>
+Python包依赖——gmpy2<br>
 
 
 
