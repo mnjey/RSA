@@ -17,20 +17,20 @@
 
 代码结构
 ========
-*common_module_attack.py：公共模数攻击。若两段RSA密文由相同的明文生成，且模数相同，加密模指数不同，则使用该攻击方法可解出明文。赛题中的Frame0和Frame4适用该攻击方法。
-*common_factor_attack.py：公共因子攻击。若两段RSA密文的模数具有公共因子，则可以很容易对这两个模数进行分解，进而可以解出解密指数d，最后解出明文。赛题中的Frame1和Frame18适用该攻击方法。
-*low_exponent_attack.py：低指数攻击。若有多段RSA密文由相同的明文生成，且加密模指数相同且不大，模数不同，则使用该攻击方法可解出明文。赛题中的Frame12,Frame16,Frame20,Frame3,Frame8适用该攻击方法。
-*multithread_factor.py：弱模数分解攻击。若RSA密文的模数N的素因子p和q很接近，则可以很容易对其进行分解，进而解出解密模数d及明文。由于该攻击方法对不具有上述特征的模数N效率很低，这里我们采用多线程的方式同时对所有的模数N尝试上述攻击。进过一段时间的尝试，赛题三的Frame10和Frame14被成功破解。
-*third_frame_wordlist_attack.py：字典攻击。根据目前已解出的明文帧，可以判断出明文结构，且我们已解出第二段明文信息，根据其末尾字母，可对第三段明文帧进行字典攻击，并对长度不够的位进行穷举，最后解出Frame7的明文即为第三段明文帧。
-*fourth_frame_wordlist_attack.py：字典攻击。与third_frame_wordlist_attack.py类似，根据第三段明文帧对第四段明文帧进行字典攻击，最后解出Frame11的明文即为第四段明文帧。
-*seventh_frame_wordlist_attack.py：字典攻击。根据上述攻击我们已经得到一部分明文片段，推测出明文大意，结合搜索引擎，推测出大部分剩余明文，但Frame2仍未知，根据上下文列出其可能的明文信息组成字典，最后成功解出明文。
-*dictionary.txt:third_frame_wordlist_attack.py：用到的字典
-*dictionary_1.txt:fourth_frame_wordlist_attack.py：用到的字典
+    *common_module_attack.py：公共模数攻击。若两段RSA密文由相同的明文生成，且模数相同，加密模指数不同，则使用该攻击方法可解出明文。赛题中的Frame0和Frame4适用该攻击方法。
+    *common_factor_attack.py：公共因子攻击。若两段RSA密文的模数具有公共因子，则可以很容易对这两个模数进行分解，进而可以解出解密指数d，最后解出明文。赛题中的Frame1和Frame18适用该攻击方法。
+    *low_exponent_attack.py：低指数攻击。若有多段RSA密文由相同的明文生成，且加密模指数相同且不大，模数不同，则使用该攻击方法可解出明文。赛题中的Frame12,Frame16,Frame20,Frame3,Frame8适用该攻击方法。
+    *multithread_factor.py：弱模数分解攻击。若RSA密文的模数N的素因子p和q很接近，则可以很容易对其进行分解，进而解出解密模数d及明文。由于该攻击方法对不具有上述特征的模数N效率很低，这里我们采用多线程的方式同时对所有的模数N尝试上述攻击。进过一段时间的尝试，赛题三的Frame10和Frame14被成功破解。
+    *third_frame_wordlist_attack.py：字典攻击。根据目前已解出的明文帧，可以判断出明文结构，且我们已解出第二段明文信息，根据其末尾字母，可对第三段明文帧进行字典攻击，并对长度不够的位进行穷举，最后解出Frame7的明文即为第三段明文帧。
+    *fourth_frame_wordlist_attack.py：字典攻击。与third_frame_wordlist_attack.py类似，根据第三段明文帧对第四段明文帧进行字典攻击，最后解出Frame11的明文即为第四段明文帧。
+    *seventh_frame_wordlist_attack.py：字典攻击。根据上述攻击我们已经得到一部分明文片段，推测出明文大意，结合搜索引擎，推测出大部分剩余明文，但Frame2仍未知，根据上下文列出其可能的明文信息组成字典，最后成功解出明文。
+    *dictionary.txt:third_frame_wordlist_attack.py：用到的字典
+    *dictionary_1.txt:fourth_frame_wordlist_attack.py：用到的字典
 
 
 赛题文档及相关文件
 ==================
-*赛题三.pdf                            :赛题三官方文档
-*fujian2/*                             :赛题密文文件
-*fujian/*                              :官方提供示例文件
-*表一.pdf                              :解密结果及相关参数
+*赛题三.pdf：赛题三官方文档<br>
+*fujian2/*：赛题密文文件<br>
+*fujian/*：官方提供示例文件<br>
+*表一.pdf：解密结果及相关参数<br>
