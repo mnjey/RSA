@@ -24,10 +24,10 @@ Python包依赖——gmpy2<br>
     third_frame_wordlist_attack.py：字典攻击。根据目前已解出的明文帧，可以判断出明文结构，且我们已解出第二段明文信息，根据其末尾字母，可对第三段明文帧进行字典攻击，并对长度不够的位进行穷举，最后解出Frame7的明文即为第三段明文帧。
     fourth_frame_wordlist_attack.py：字典攻击。与third_frame_wordlist_attack.py类似，根据第三段明文帧对第四段明文帧进行字典攻击，最后解出Frame11的明文即为第四段明文帧。
     seventh_frame_wordlist_attack.py：字典攻击。根据上述攻击我们已经得到一部分明文片段，推测出明文大意，结合搜索引擎，推测出大部分剩余明文，但Frame2仍未知，根据上下文列出其可能的明文信息组成字典，最后成功解出明文。
-        verify.py:验证所得明文帧用公钥加密后的密文是否在题设的密文帧列表中。
-    dictionary.txt:third_frame_wordlist_attack.py：用到的字典。
-    dictionary_1.txt:fourth_frame_wordlist_attack.py：用到的字典。
-        answer.txt:全部的明文帧。
+    verify.py:验证所得明文帧用公钥加密后的密文是否在题设的密文帧列表中。
+    dictionary.txt:third_frame_wordlist_attack.py：用到的字典。
+    dictionary_1.txt:fourth_frame_wordlist_attack.py：用到的字典。
+    answer.txt:全部的明文帧。
     
 
 
