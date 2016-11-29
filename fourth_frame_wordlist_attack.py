@@ -31,7 +31,7 @@ len_4_list=[]
 len_3_list=[]
 len_2_list=[]
 len_1_list=[]
-with open('../dictionary_1.txt') as dic_fd::                                           #From attemping,we have found that this attack takes a lot of time,and with the length of the word decrease,the time the exhaustive attack takes rates exponentially  
+with open('../dictionary_1.txt') as dic_fd:                                            #From attemping,we have found that this attack takes a lot of time,and with the length of the word decrease,the time the exhaustive attack takes rates exponentially  
 	for line in dic_fd.readlines():                                                    #So we classify words in wordlist by length,and try short words first and then long words. 
 		tmp=line.strip().lower()
 		if(len(tmp)>=10):
